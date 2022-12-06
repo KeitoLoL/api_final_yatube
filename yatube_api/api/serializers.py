@@ -12,14 +12,14 @@ class CommentSerializer(serializers.ModelSerializer):
     )
 
     class Meta:
-        fields = ('text', 'created', 'id', 'author', 'post')
+        fields = '__all__'
         model = Comment
         read_only_fields = ['post']
 
 
 class GroupSerializer(serializers.ModelSerializer):
     class Meta:
-        fields = ('title', 'slug', 'description')
+        fields = '__all__'
         model = Group
 
 
@@ -30,7 +30,7 @@ class PostSerializer(serializers.ModelSerializer):
     )
 
     class Meta:
-        fields = ('text', 'author', 'pub_date', 'group', 'id')
+        fields = '__all__'
         model = Post
 
 
